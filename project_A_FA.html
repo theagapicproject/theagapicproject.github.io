@@ -149,7 +149,7 @@
         }
     }
     */
-    if(document.body.clientWidth < 1080){
+if(document.body.clientWidth < 1080){
         document.getElementById("cont").style.left = 0;
         document.getElementById("cont").style.width = 100 + '%';
         document.getElementById("cont").style.marginTop = 40 + '%';
@@ -172,4 +172,30 @@
     }else{
         document.getElementById("title_id").style.fontSize = 60 + 'px';
     }
+  
+    window.addEventListener('resize', function(event) {
+        if(document.body.clientWidth < 1080){
+            document.getElementById("cont").style.left = 0;
+            document.getElementById("cont").style.width = 100 + '%';
+            document.getElementById("cont").style.marginTop = 40 + '%';
+            document.getElementById("cont").style.backgroundSize = "auto";
+
+            document.getElementById("post").style.left = 2 + '%';
+            document.getElementById("post").style.width = 96 + '%';
+            document.getElementById("post").style.borderRadius = 5 + 'px';
+
+            document.getElementById("menu").style.left = 1 + '%';
+            document.getElementById("menu").style.width = 90 + '%';
+            document.getElementById("menu").style.borderRadius = 5 +'px';
+
+            document.getElementById("footer-img").style.width = 60 + '%';
+            document.getElementById("footer-img").style.height = 60 + '%';
+            document.getElementById("footer-img").style.left = 30 + '%';
+        }
+        if(screen.height > 900){
+            document.getElementById("title_id").style.fontSize = 100 + 'px';
+        }else{
+            document.getElementById("title_id").style.fontSize = 60 + 'px';
+        }
+    }, true);
 </script>
