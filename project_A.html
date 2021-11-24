@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="project_A.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <title>TAP Home</title>
+</head>
+<body id="bod" style="background-image: url('4k2.jpg'); background-size: cover; background-repeat: no-repeat; background-attachment: fixed; overflow-x: hidden;" >
+        <div class="title_area">
+            <h1 class="title" id="title_id">The Agapic Project</h1>
+        </div>
+
+        <div id="cont" class="container">
+            
+                <ul id="menu">
+                    <li id="menu_list_item"><a style="color: green;" id="menu_item" href="">Home</a></li>
+                    <li id="menu_list_item"><a id="menu_item" href="project_A_FA.html">File Access</a></li>
+                    <li id="menu_list_item"><a id="menu_item" href="project_A_About.html">About Us</a></li>
+                    <li id="menu_list_item"><a id="menu_item" href="">Donations</a></li>
+                </ul>
+                <div class="post" id="post">
+                    <div class="post-header">
+                        <h1>Post name</h1>
+                    </div>
+                    <div class="post-main">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae necessitatibus voluptas excepturi vero, sed minus eligendi provident nihil expedita itaque nobis autem ipsa quo qui. Doloremque, molestias ipsam! Asperiores voluptate commodi, id magni animi voluptates error! Quod, commodi culpa, minus cumque nostrum excepturi doloremque tenetur autem minima, voluptatibus dolor omnis! Saepe eveniet neque necessitatibus nesciunt repellat, incidunt eos odit autem voluptatum illum. Libero in voluptatibus provident neque odit obcaecati doloremque, dicta officiis quod dolore incidunt error fuga sed eius perferendis voluptatum explicabo mollitia delectus dignissimos eveniet aperiam labore repudiandae cumque. Alias, amet omnis illo quidem ut odio molestias veritatis molestiae beatae nobis consequuntur. Officiis itaque iste debitis vel repellendus, excepturi delectus dolorum a sequi laborum cumque? Accusamus deserunt, obcaecati natus repellat fugiat quas dolor voluptas impedit. Quam qui ullam distinctio expedita modi quibusdam possimus quaerat soluta deserunt ipsum iusto hic, cupiditate perspiciatis temporibus nisi atque, sequi esse id. Ad repudiandae doloremque ipsa inventore quo veniam minima iure asperiores maxime reiciendis perferendis exercitationem mollitia optio magni ullam quibusdam, sit corporis facere eveniet pariatur eligendi sunt et adipisci obcaecati! Provident doloremque officia natus, id quae quibusdam incidunt reiciendis laudantium a, corporis culpa exercitationem distinctio quasi ex ipsum? Voluptatibus cum minima mollitia nobis.</p>
+                    </div>
+                    <div class="post-footer">
+                        <p>Written by...</p>
+                    </div>
+                </div>
+                <div class="post" id="post2">
+                    <div class="post-header">
+                        <h1>Post name</h1>
+                    </div>
+                    <div class="post-main">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae necessitatibus voluptas excepturi vero, sed minus eligendi provident nihil expedita itaque nobis autem ipsa quo qui. Doloremque, molestias ipsam! Asperiores voluptate commodi, id magni animi voluptates error! Quod, commodi culpa, minus cumque nostrum excepturi doloremque tenetur autem minima, voluptatibus dolor omnis! Saepe eveniet neque necessitatibus nesciunt repellat, incidunt eos odit autem voluptatum illum. Libero in voluptatibus provident neque odit obcaecati doloremque, dicta officiis quod dolore incidunt error fuga sed eius perferendis voluptatum explicabo mollitia delectus dignissimos eveniet aperiam labore repudiandae cumque. Alias, amet omnis illo quidem ut odio molestias veritatis molestiae beatae nobis consequuntur. Officiis itaque iste debitis vel repellendus, excepturi delectus dolorum a sequi laborum cumque? Accusamus deserunt, obcaecati natus repellat fugiat quas dolor voluptas impedit. Quam qui ullam distinctio expedita modi quibusdam possimus quaerat soluta deserunt ipsum iusto hic, cupiditate perspiciatis temporibus nisi atque, sequi esse id. Ad repudiandae doloremque ipsa inventore quo veniam minima iure asperiores maxime reiciendis perferendis exercitationem mollitia optio magni ullam quibusdam, sit corporis facere eveniet pariatur eligendi sunt et adipisci obcaecati! Provident doloremque officia natus, id quae quibusdam incidunt reiciendis laudantium a, corporis culpa exercitationem distinctio quasi ex ipsum? Voluptatibus cum minima mollitia nobis.</p>
+                    </div>
+                    <div class="post-footer">
+                        <p>Written by...</p>
+                    </div>
+                </div>
+                <div class="fade-section" id="fade-section">
+                </div>
+                <div class="footer" id="footer">
+                    <div id="footer-L"><p>The Agapic Project</p>
+                        <ul>
+                            <li>Facebook</li>
+                            <li>Twitter</li>
+                            <li>Instagram</li>
+                            <li>Discord</li>
+                        </ul>
+                        <a href="">Member Login...</a></div>
+                    <div id="footer-R">
+                        <img id="footer-img" src="TAP_social.png">
+                    </div>
+                </div>
+        </div>
+</body>
+</html>
+<script>
+    var textWrapper = document.querySelector('.title');
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+    anime.timeline({loop: false})
+    .add({
+        targets: '.title .letter',
+        opacity: [0,1],
+        easing: "easeInOutQuad",
+        duration: 2000,
+        delay: (el, i) => 5 * (i+1)
+    });
+
+    var lastScrollTop = 0;
+    var elemOp = 1;
+    var posContainer = 100;
+    var elemPos = 0;
+    var op = 100;
+    var animation_start = true;
+    
+
+    window.addEventListener("scroll", function(){ 
+    var st = window.pageYOffset || document.documentElement.scrollTop; 
+    if (st > lastScrollTop && elemOp == 1 ){
+        if(animation_start){
+            document.getElementById("bod").style.overflowY = "hidden";
+            moveD();
+            document.getElementById("bod").style.overflowY = "auto";
+            elemOp = 0
+        }
+    } else if(st == 0) {
+        if(animation_start){
+            moveU();
+            elemOp = 1;
+        }
+    }
+    lastScrollTop = st <= 0 ? 0 : st; 
+    }, false);
+
+    function moveD(){
+        animation_start = false;
+        let id = null;
+        const elem = document.getElementById("title_id");
+        let pos = 100;
+        clearInterval(id);
+        id = setInterval(frame, 5);
+        function frame() {
+            if (elemOp == 0 && posContainer == 10) {
+                animation_start = true;
+                clearInterval(id);
+            } else {
+                if(elemOp > 0){
+                    elemOp-=0.05;
+                }
+                if(posContainer > 10){
+                    posContainer--;
+                }
+                elem.style.opacity = elemOp;
+                document.getElementById("cont").style.marginTop = posContainer + '%';
+            }
+        }
+    }
+
+    function moveU(){
+        animation_start = false;
+        let id = null;
+        const elem = document.getElementById("title_id");
+        let pos = -200;
+        clearInterval(id);
+        id = setInterval(frame, 5);
+        function frame() {
+            if (elemOp == 1 && posContainer == 70) {
+                animation_start = true;
+                clearInterval(id);
+            } else {
+                if(elemOp < 1){
+                    pos+=0.05;
+                }
+                if(posContainer < 70){
+                    posContainer++;
+                }
+                elem.style.opacity = elemOp;
+                document.getElementById("cont").style.marginTop = posContainer + '%';
+            }
+        }
+    }
+    if(screen.width < 1080){
+        document.getElementById("cont").style.left = 0;
+        document.getElementById("cont").style.width = 100 + '%';
+
+        document.getElementById("post").style.left = 2 + '%';
+        document.getElementById("post").style.width = 96 + '%';
+        document.getElementById("post").style.borderRadius = 5 + 'px';
+
+        document.getElementById("post2").style.left = 2 + '%';
+        document.getElementById("post2").style.width = 96 + '%';
+        document.getElementById("post2").style.borderRadius = 5 + 'px';
+
+        document.getElementById("menu").style.left = 1 + '%';
+        document.getElementById("menu").style.width = 90 + '%';
+        document.getElementById("menu").style.borderRadius = 5 +'px';
+
+        document.getElementById("footer-img").style.width = 60 + '%';
+        document.getElementById("footer-img").style.height = 60 + '%';
+        document.getElementById("footer-img").style.left = 30 + '%';
+    }
+    if(screen.height > 900){
+        document.getElementById("title_id").style.fontSize = 100 + 'px';
+    }else{
+        document.getElementById("title_id").style.fontSize = 60 + 'px';
+    }
+</script>
