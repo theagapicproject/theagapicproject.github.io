@@ -117,8 +117,8 @@ body{
 #footer-R{
     padding-top: 2%;
     position: relative;
-    float: right;
-    width: 40%;
+    float: left;
+    width: 50%;
 }
 #footer-img{
     position: relative;
