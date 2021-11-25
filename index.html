@@ -170,7 +170,9 @@
         document.getElementById("title_id").style.fontSize = 100 + 'px';
     }else{
         document.getElementById("title_id").style.fontSize = 60 + 'px';
-        document.getElementById("cont").style.marginTop = 50 + '%';
+    }
+    if(document.body.clientHeight < 700){
+            document.getElementById("cont").style.marginTop = 50 + '%'
     }
     
     window.addEventListener('resize', function() {
@@ -209,6 +211,8 @@
             document.getElementById("title_id").style.fontSize = 100 + 'px';
         }else{
             document.getElementById("title_id").style.fontSize = 60 + 'px';
+        }
+        if(document.body.clientHeight < 700){
             document.getElementById("cont").style.marginTop = 50 + '%'
         }
     });
