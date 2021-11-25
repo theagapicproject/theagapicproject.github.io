@@ -22,7 +22,8 @@ body{
 }
 #menu { 
     list-style-type: none;
-    margin: 2%;
+    margin: 2% 0 2% 5%;
+    width: 90%;
     padding: 10px;
     overflow: hidden;
     background-color: white;
