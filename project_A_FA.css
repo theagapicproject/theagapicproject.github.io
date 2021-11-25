@@ -108,8 +108,9 @@ body{
     box-shadow: 2px 2px 2px 1px inset rgba(66, 66, 66, 0.507);
 }
 #document{
-    margin-top: 3%;
-    margin-bottom: 3%;
+    padding-top: 2%;
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
 #fade-section{
     width: 100%;
